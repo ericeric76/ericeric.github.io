@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Biodata Mahasiswa</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <header>
+    <div class="logo">
+  Profil Mahasiswa
+</div>
+
+    <nav>
+      <a href="#home">Home</a>
+      <a href="#profil">Profil</a>
+      <a href="#tentang">Tentang</a>
+      <a href="#skill">Skill</a>
+      <a href="#proyek">Proyek</a>
+      <a href="#kontak">Kontak</a>
+    </nav>
+
+    <button class="toggle-btn" onclick="toggleDarkMode()">Mode Gelap</button>
+  </header>
+
+  <div class="container">
+
+    <section id="home" class="hero">
+      <div class="card">
+        <h1>Halo! Saya Mahasiswa 👋</h1>
+        <p>
+          Selamat datang di website biodata saya. Website ini dibuat menggunakan HTML, CSS, dan JavaScript.
+          Saya memiliki dedikasi untuk berkembang sebagai programmer yang mampu membangun solusi digital yang solutif dan bermanfaat.
+        </p>
+
+        <div class="badge">
+          Motto: "Belajar sedikit setiap hari, hasilnya besar nanti."
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="profile-box">
+          <img src="Foto.jpeg" alt="Foto Profil Eric">
+          <div class="profile-info">
+            <h2 id="nama">Eric</h2>
+            <small id="status">Mahasiswa | Sistem Informasi</small>
+          </div>
+        </div>
+
+        <div class="info-grid">
+          <div class="info-item"><b>NPM:</b> <span id="NPM">000000000</span></div>
+          <div class="info-item"><b>Kampus:</b> <span id="kampus">Nama Kampus</span></div>
+          <div class="info-item"><b>Domisili:</b> <span id="domisili">Batam</span></div>
+          <div class="info-item"><b>Email:</b> <span id="email">25.01.eric@uib.edu</span></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="profil">
+      <h2 class="section-title">Profil Saya</h2> <table class="profil-table">
+        <tr><td>Nama</td><td>: Eric</td></tr>
+        <tr><td>Tempat/Tgl Lahir</td><td>: Tanjung Balai Karimun, 13 Juni 2007</td></tr>
+        <tr><td>Jurusan</td><td>: Sistem Informasi</td></tr>
+        <tr><td>Semester</td><td>: 2</td></tr>
+        <tr><td>Hobi</td><td>: Belajar, Main Game, Dengar Musik</td></tr>
+        <tr><td>Cita-cita</td><td>: Web Developer</td></tr>
+      </table>
+    </section>
+
+    <section id="tentang">
+      <h2 class="section-title">Tentang Saya</h2>
+      <div class="card">
+        <p class="text">
+          Saya adalah seorang mahasiswa yang sedang belajar pemrograman dan tertarik di bidang Web Developer.
+          Saya suka mencoba hal baru, belajar desain UI, dan membuat project kecil.
+        </p>
+      </div>
+    </section>
+
+    <section id="skill">
+      <h2 class="section-title">Skill Saya</h2>
+      <div class="card skills">
+
+        <div>
+          <div class="skill">
+            <label>HTML <span>40%</span></label>
+            <div class="bar"><div class="fill" data-skill="40"></div></div>
+          </div>
+
+          <div class="skill">
+            <label>CSS <span>30%</span></label>
+            <div class="bar"><div class="fill" data-skill="30"></div></div>
+          </div>
+
+          <div class="skill">
+            <label>JavaScript <span>35%</span></label>
+            <div class="bar"><div class="fill" data-skill="35"></div></div>
+          </div>
+        </div>
+
+        <div>
+          <div class="skill">
+            <label>Public Speaking <span>40%</span></label>
+            <div class="bar"><div class="fill" data-skill="40"></div></div>
+          </div>
+
+          <div class="skill">
+            <label>Problem Solving <span>50%</span></label>
+            <div class="bar"><div class="fill" data-skill="50"></div></div>
+          </div>
+
+          <div class="skill">
+            <label>Teamwork <span>45%</span></label>
+            <div class="bar"><div class="fill" data-skill="45"></div></div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <section id="proyek">
+      <h2 class="section-title">Proyek Saya</h2>
+
+      <div class="projects">
+        <div class="card project-card">
+          <h3>Website Biodata</h3>
+          <p>Membuat web biodata mahasiswa dengan tampilan modern.</p>
+          <span class="tag">HTML + CSS + JAVASCRIPT</span>
+        </div>
+
+        <div class="card project-card">
+          <h3>Pengembangan Konten Multimedia</h3>
+          <p>Merancang poster edukatif dan video kreatif untuk menyampaikan informasi</p>
+          <span class="tag">ADOBE + CAPCUT</span>
+        </div>
+
+        <div class="card project-card">
+          <h3>Game Interaktif</h3>
+          <p>Mengembangkan game interaktif berbasis logika menggunakan Python.</p>
+          <span class="tag">PYTHON</span>
+        </div>
+      </div>
+    </section>
+
+    <section id="kontak">
+      <h2 class="section-title">Kontak Saya</h2>
+      <div class="card">
+        <form onsubmit="kirimPesan(event)">
+          <input type="text" id="namaPengirim" placeholder="Nama kamu..." required />
+          <input type="email" id="emailPengirim" placeholder="Email kamu..." required />
+          <textarea id="pesan" placeholder="Tulis pesan..." required></textarea>
+          <button class="send-btn" type="submit">Kirim Pesan</button>
+        </form>
+      </div>
+    </section>
+
+  </div>
+
+  <footer>
+    © 2026 - Website Biodata Mahasiswa | Dibuat dengan HTML, CSS, dan JavaScript
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
